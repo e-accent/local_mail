@@ -1,6 +1,6 @@
 require 'test_helper'
 
 module LocalMail
-  class MailHelperTest < ActionView::TestCase
+  class MailsHelperTest < ActionView::TestCase
   end
 end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module LocalMail
-  class MailControllerTest < ActionController::TestCase
+  class MailsControllerTest < ActionController::TestCase
     # test "the truth" do
     #   assert true
     # end

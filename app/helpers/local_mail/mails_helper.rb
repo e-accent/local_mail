@@ -1,4 +1,4 @@
 module LocalMail
-  module MailHelper
+  module MailsHelper
   end
 end
