@@ -7,13 +7,13 @@ require "local_mail/version"
 Gem::Specification.new do |s|
   s.name        = "local_mail"
   s.version     = LocalMail::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
+  s.authors     = ["weih"]
+  s.email       = ["imwillmouse@gmail.com"]
+  s.homepage    = "https://github.com/weih/local_mail"
   s.summary     = "TODO: Summary of LocalMail."
   s.description = "TODO: Description of LocalMail."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2"
