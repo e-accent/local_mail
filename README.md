@@ -7,12 +7,12 @@ gem 'local_mail', :git =>  'https://github.com/weih/local_mail.git', :group => [
 # config/routes.rb
 Your::Application.routes.draw do
   if Rails.env.development?
-    mount LocalMail::Engine, at: "/local_mail"
+    mount LocalMail::Engine, at: '/local_mail"
   end
 end
 
 # config/environments/development.rb or config/environments/staging.rb
-config.action_mailer.delivery_method = :letter_opener_web
+config.action_mailer.delivery_method = :local_mail
 
 # Email will be saved at tmp/local_mail folder
 ```
