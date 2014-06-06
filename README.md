@@ -7,7 +7,7 @@ gem 'local_mail', :git =>  'https://github.com/weih/local_mail.git', :group => [
 # config/routes.rb
 Your::Application.routes.draw do
   if Rails.env.development?
-    mount LocalMail::Engine, at: '/local_mail"
+    mount LocalMail::Engine, at: '/local_mail'
   end
 end
 
