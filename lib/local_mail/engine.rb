@@ -1,4 +1,3 @@
-require 'letter_opener'
 require 'local_mail/delivery_method'
 
 module LocalMail
