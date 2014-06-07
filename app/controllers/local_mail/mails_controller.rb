@@ -7,10 +7,10 @@ class LocalMail::MailsController < ApplicationController
     @emails = Array.new
 
     in_mail_directory do |dir|
-	time = dir.split('_').first
-	subject = dir.split('_').second.gsub!('-',' ').humanize + " (To: <#{dir.split('_').third}>)"
-	href = dir.split('_').fourth + ( rich_style?(dir) ? '/rich': '/plain' )
-	@emails << { time: time, subject: subject, href: href }
+      time = dir.split('_').first
+      subject = dir.split('_').second.gsub!('-',' ').humanize + " (To: <#{dir.split('_').third}>)"
+      href = dir.split('_').fourth + ( rich_style?(dir) ? '/rich': '/plain' )
+      @emails << { time: time, subject: subject, href: href }
     end
 
     @emails = @emails.sort_by { |email| email[:time] }.reverse.take(200)
@@ -20,11 +20,11 @@ class LocalMail::MailsController < ApplicationController
     email_content = ''
 
     in_mail_directory("*#{params[:hash]}") do |dir|
-      if params[:style] != 'plain' && rich_style?(dir)
-	email_content = File.read("#{dir}/rich.html")
-      else
-	email_content = File.read("#{dir}/plain.html")
-      end
+      email_content = if params[:style] != 'plain' && rich_style?(dir)
+			File.read("#{dir}/rich.html")
+		      else
+			File.read("#{dir}/plain.html")
+		      end
     end
 
     fix_links(email_content)
