@@ -21,10 +21,10 @@ class LocalMail::MailsController < ApplicationController
 
     in_mail_directory("*#{params[:hash]}") do |dir|
       email_content = if params[:style] != 'plain' && rich_style?(dir)
-			File.read("#{dir}/rich.html")
-		      else
-			File.read("#{dir}/plain.html")
-		      end
+                        File.read("#{dir}/rich.html")
+                      else
+                        File.read("#{dir}/plain.html")
+                      end
     end
 
     fix_links(email_content)
@@ -59,7 +59,7 @@ class LocalMail::MailsController < ApplicationController
   def in_mail_directory(pattern = '*')
     Dir.chdir(Rails.root.join('tmp', 'local_mail')) do
       Dir.glob(pattern) do |dir|
-	yield dir
+        yield dir
       end
     end
   end
