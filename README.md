@@ -14,5 +14,7 @@ end
 # config/environments/development.rb or config/environments/staging.rb
 config.action_mailer.delivery_method = :local_mail
 
+# Remember to open sidekiq or resque if you're using async mail sending
+
 # Email will be saved at tmp/local_mail folder
 ```
