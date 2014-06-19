@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["weih"]
   s.email       = ["imwillmouse@gmail.com"]
   s.homepage    = "https://github.com/weih/local_mail"
-  s.summary     = "TODO: Summary of LocalMail."
-  s.description = "TODO: Description of LocalMail."
+  s.summary     = "Test emails in local"
+  s.description = "Test emails in loca"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
