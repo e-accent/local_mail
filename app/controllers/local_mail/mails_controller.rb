@@ -8,7 +8,7 @@ class LocalMail::MailsController < ApplicationController
 
     in_mail_directory do |dir|
       time = dir.split('_').first
-      subject = dir.split('_').second.gsub!('-',' ').humanize + " (To: <#{dir.split('_').third}>)"
+      subject = dir.split('_').second.gsub('-',' ').humanize + " (To: <#{dir.split('_').third}>)"
       href = dir.split('_').fourth + ( rich_style?(dir) ? '/rich': '/plain' )
       @emails << { time: time, subject: subject, href: href }
     end
