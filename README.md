@@ -1,7 +1,7 @@
 
 ```ruby
 # Gemfile.rb
-gem 'local_mail', :git =>  'https://github.com/e-accent/local_mail.git', :group => [:development, :staging]
+gem 'local_mail', :git =>  'https://github.com/weih/local_mail.git', :group => [:development, :staging]
     
 # config/routes.rb
 Your::Application.routes.draw do
